@@ -11,8 +11,8 @@ class AllCardsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0,
         surfaceTintColor: Colors.transparent,
+        elevation: 0,
         centerTitle: true,
         title: const Text("A L L  C A R D S"),
       ),

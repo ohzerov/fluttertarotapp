@@ -9,8 +9,6 @@ class HomePage extends StatelessWidget {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => goTo));
   }
 
-  final Widget spacingBox = SizedBox(height: SizeConfig.height(18));
-
   HomePage({super.key});
   @override
   Widget build(BuildContext context) {
@@ -33,6 +31,7 @@ class HomePage extends StatelessWidget {
             child: Center(
               child: SizedBox(
                 child: Column(
+                  spacing: SizeConfig.height(25),
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     HomePageButton(
@@ -40,13 +39,11 @@ class HomePage extends StatelessWidget {
                         onTapFunction: () {
                           navigateTo(const SingleDrawPage(), context);
                         }),
-                    spacingBox,
                     HomePageButton(
                         text: 'THREE CARDS SPREAD',
                         onTapFunction: () {
                           navigateTo(const ThreeCardSpreadPage(), context);
                         }),
-                    spacingBox,
                     HomePageButton(
                         text: 'DISCOVER CARDS',
                         onTapFunction: () {
