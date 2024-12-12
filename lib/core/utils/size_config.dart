@@ -16,14 +16,23 @@ class SizeConfig {
   }
 
   static double width(double inputWidth) {
+    if (screenWidth > screenHeight) {
+      blockSizeHorizontal = screenHeight / baseWidth;
+    }
     return inputWidth * blockSizeHorizontal;
   }
 
   static double height(double inputHeight) {
+    if (screenWidth > screenHeight) {
+      blockSizeVertical = screenWidth / baseHeight;
+    }
     return inputHeight * blockSizeVertical;
   }
 
   static double textSize(double inputSize) {
+    if (screenWidth > screenHeight) {
+      blockSizeHorizontal = screenHeight / baseWidth;
+    }
     return inputSize * blockSizeHorizontal;
   }
 }

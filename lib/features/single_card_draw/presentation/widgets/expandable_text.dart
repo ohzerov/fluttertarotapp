@@ -8,17 +8,18 @@ class ExpandableText extends StatelessWidget {
       required this.titleText,
       required this.descriptionText});
   bool isShowText = false;
-  String titleText;
-  String descriptionText;
+  final String titleText;
+  final String descriptionText;
   @override
   Widget build(BuildContext context) {
     return AnimatedSize(
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeOutCubic,
       child: isShowText
           ? Padding(
-              padding: const EdgeInsets.only(
-                  left: 8, right: 8.0, top: 16, bottom: 64),
+              padding: EdgeInsets.all(
+                SizeConfig.width(16),
+              ),
               child: SizedBox(
                 width: double.infinity,
                 child: Column(
@@ -27,14 +28,18 @@ class ExpandableText extends StatelessWidget {
                   children: [
                     Text(
                       titleText,
-                      style: TextStyle(fontSize: SizeConfig.textSize(25)),
+                      style: TextStyle(
+                          fontSize: SizeConfig.textSize(18),
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       height: SizeConfig.height(12),
                     ),
                     Text(
                       descriptionText,
-                      style: TextStyle(fontSize: SizeConfig.textSize(18)),
+                      style: TextStyle(
+                        fontSize: SizeConfig.textSize(15),
+                      ),
                     ),
                   ],
                 ),

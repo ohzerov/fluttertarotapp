@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarot/core/domain/card_model.dart';
+
 import 'package:tarot/features/three_card_spread/cubit/three_card_state.dart';
 
 class ThreeCardCubit extends Cubit<ThreeCardState> {

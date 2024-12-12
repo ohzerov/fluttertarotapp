@@ -4,8 +4,8 @@ class ButtonText extends StatelessWidget {
   final String text;
   final Color textColor;
   final double fontSize;
-  ButtonText(
-      {required this.text, required this.fontSize, required this.textColor});
+  const ButtonText(
+      {super.key, required this.text, required this.fontSize, required this.textColor});
   @override
   Widget build(BuildContext context) {
     return Text(

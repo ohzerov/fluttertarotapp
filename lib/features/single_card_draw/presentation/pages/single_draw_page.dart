@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import 'package:tarot/features/single_card_draw/providers/page_view_holder.dart';
 import 'package:tarot/features/single_card_draw/presentation/widgets/pageview_card.dart';
 
 class SingleDrawPage extends StatefulWidget {
+  const SingleDrawPage({super.key});
+
   @override
   State<SingleDrawPage> createState() => _SingleDrawPageState();
 }
